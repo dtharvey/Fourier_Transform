@@ -6,4 +6,4 @@ To run locally, install the package Shiny (if not already installed), and enter 
 
 library(shiny)
 
-shiny::runGitHub("Distributions","dtharvey")
+shiny::runGitHub("Fourier_Transform","dtharvey")
