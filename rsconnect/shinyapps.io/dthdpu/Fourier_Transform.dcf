@@ -1,0 +1,14 @@
+name: Fourier_Transform
+title: Fourier_Transform
+username:
+account: dthdpu
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7430073
+bundleId: 6443884
+url: https://dthdpu.shinyapps.io/Fourier_Transform/
+when: 1666807135.51627
+lastSyncTime: 1666807135.51628
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: ft_text.Rmd|FT.R
