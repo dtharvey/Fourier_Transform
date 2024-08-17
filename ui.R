@@ -11,6 +11,7 @@ ui = navbarPage("AC 3.0: The Fourier Transform",
           ),
               tabPanel("Introduction",
                 fluidRow(
+                  withMathJax(),
                   column(width = 6,
                     wellPanel(
                       includeHTML("text/introduction.html")

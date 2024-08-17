@@ -1,32 +1,32 @@
 ---
-output: html_document
+output: html_fragment
 ---
 
 <!-- The following script makes it possible to use the mhchem -->
 <!-- latex package in a .Rmd file and to knit it into an .html file -->
 <!-- the font size is scaled to 90% to match text -->
 
-```{=html}
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: {
-    extensions: ["[Contrib]/mhchem/mhchem.js"]
-}
-});
-MathJax.Hub.Config({ 
-        "HTML-CSS": { scale: 90 }, 
-        SVG: { linebreaks: { automatic:true } }, 
- });
-</script>
-```
+<!-- ```{=html} -->
+<!-- <script type="text/x-mathjax-config"> -->
+<!-- MathJax.Hub.Config({ -->
+<!--   TeX: { -->
+<!--     extensions: ["[Contrib]/mhchem/mhchem.js"] -->
+<!-- } -->
+<!-- }); -->
+<!-- MathJax.Hub.Config({  -->
+<!--         "HTML-CSS": { scale: 90 },  -->
+<!--         SVG: { linebreaks: { automatic:true } },  -->
+<!--  }); -->
+<!-- </script> -->
+<!-- ``` -->
 
 <!-- text for activity 1 -->
 
-The ability to represent a signal in the time domain or in the frequency domain is general and applies to both periodic functions, such as a continuously repeating square wave, or a non-periodic function, such as a peak in an NMR spectrum. The Fourier transform for a non-periodic function---the mathematical details of which we will not develop here---accomplishes the same thing as the Fourier series does for a square wave, although the individual sine (or cosine) waves also include an exponential decay that ensures the resulting peak has a beginning and an end. The controls on the right allow you to explore the relationship between a peak in the frequency domain and its corresponding oscillating signal in the time domain. 
+The ability to represent a signal in the time domain or in the frequency domain is general and applies to both periodic functions, such as the continuously repeating square wave from the introduction, or a non-periodic function, such as a peak in an NMR spectrum. The controls on the right allow you to explore the relationship between a peak in the frequency domain and its corresponding oscillating signal in the time domain. 
 
-**Exercise 1**. A peak in the frequency domain is defined by three variables: its position on the frequency axis, its width at half its maximum height, and its area. The corresponding time domain signal is an oscillating wave defined by three properties: its period, its amplitude, and its decay rate. Annotate the figure to show each of these six variables.
+**Exercise 1**. A peak in the frequency domain is defined by three variables: its position on the frequency axis, its width at half of its maximum height, and its area. The corresponding time domain signal is an oscillating wave defined by three properties: its period, its amplitude, and its decay rate. Annotate the figure on the right to show each of these six variables. 
 
-**Exercise 2.** Absorption bands in molecular UV/Vis spectroscopy are often modeled as Gaussian peaks. Use the pop-up menu to select a Gaussian peak and use the sliders to observe how each of the three variable's that define the peak in the frequency domain affect the three properties of the oscillating signal in the time domain. You should be able to determine a 1:1 correspondence between each of the peak's variables and the oscillating signal's properties.
+**Exercise 2.** Absorption bands in molecular UV/Vis spectroscopy are often modeled as Gaussian peaks. Use the pop-up menu to select a Gaussian peak and use the sliders to observe how each of the three variable's that define the peak in the frequency domain affect the three properties of the oscillating signal in the time domain. You should be able to establish a 1:1 correspondence between each of the peak's variables and the oscillating signal's properties.
 
 **Exercise 3.** In NMR spectroscopy, the ideal peak shape is Lorentzian. Use the controls on the right to examine the difference between the shape of a Lorentzian peak and the shape of a Gaussian peak that has the same position, width, and area. Are the relationships between the time domain and the frequency domain the same for both types of peaks?
 

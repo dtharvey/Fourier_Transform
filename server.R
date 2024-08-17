@@ -27,7 +27,7 @@ shinyServer(function(input,output,session){
   
   output$introplot = renderPlot({
     old.par = par(mfrow = c(3,1))
-    plot(x = t, y = yt, type = "l", xlab = "time", ylab = "amplitude",
+    plot(x = t, y = yt, type = "l", xlab = "time (s)", ylab = "amplitude",
          lwd = 4, col = 6, cex.axis = 1.5, cex.lab = 1.5, 
          ylim = c(-1.5,1.5), cex.main = 1.5,
          main = "time domain")
@@ -38,15 +38,15 @@ shinyServer(function(input,output,session){
          main = "frequency domain")
     text(x = a, y = A, labels = round(A, digits = 3), pos = 3, cex = 1.5)
     grid(lwd = 1, col = 1)
-    plot(x = t, y = y1 + y2 + y3 + y4 + y5, type = "l", xlab = "time",
+    plot(x = t, y = y1 + y2 + y3 + y4 + y5, type = "l", xlab = "time (s)",
          ylab = "amplitude", lwd = 4, col = 3, cex.axis = 1.5, 
          cex.lab = 1.5, ylim = c(-1.5,1.5), cex.main = 1.5, 
          main = "supperposition of Fourier series")
-    lines(x = t, y = y1, lty = 2, lwd = 2, col = 3)
-    lines(x = t, y = y2, lty = 2, lwd = 2, col = 3)
-    lines(x = t, y = y3, lty = 2, lwd = 2, col = 3)
-    lines(x = t, y = y4, lty = 2, lwd = 2, col = 3)
-    lines(x = t, y = y5, lty = 2, lwd = 2, col = 3)
+    lines(x = t, y = y1, lty = 2, lwd = 2, col = 2)
+    lines(x = t, y = y2, lty = 2, lwd = 2, col = 4)
+    lines(x = t, y = y3, lty = 2, lwd = 2, col = 5)
+    lines(x = t, y = y4, lty = 2, lwd = 2, col = 7)
+    lines(x = t, y = y5, lty = 2, lwd = 2, col = 8)
     lines(x = t, y = yt, lwd = 4, lty = 3, col = 1)
     grid(lwd = 1, col = 1)
     par(old.par)
