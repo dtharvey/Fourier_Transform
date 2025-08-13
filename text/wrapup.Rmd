@@ -2,24 +2,6 @@
 output: html_fragment
 ---
 
-<!-- The following script makes it possible to use the mhchem -->
-<!-- latex package in a .Rmd file and to knit it into an .html file -->
-<!-- the font size is scaled to 90% to match text -->
-
-<!-- ```{=html} -->
-<!-- <script type="text/x-mathjax-config"> -->
-<!-- MathJax.Hub.Config({ -->
-<!--   TeX: { -->
-<!--     extensions: ["[Contrib]/mhchem/mhchem.js"] -->
-<!-- } -->
-<!-- }); -->
-<!-- MathJax.Hub.Config({  -->
-<!--         "HTML-CSS": { scale: 90 },  -->
-<!--         SVG: { linebreaks: { automatic:true } },  -->
-<!--  }); -->
-<!-- </script> -->
-<!-- ``` -->
-
 <!-- text for wrapping up -->
 
 #### FT of Diffuse Reflectance Spectrum
@@ -32,7 +14,7 @@ In the figure on the right---and in the examples considered in this module---the
 
 #### Data Set Used in this Module
 
-The data for the urea's diffuse reflectance spectrum is from the [National Institute of Standards and Technology (NIST)](https://webbook.nist.gov/cgi/cbook.cgi?ID=C57136&Type=IR-SPEC&Index=1#IR-SPEC). The original data gives the intensity of reflected light for 7135 wavenumbers from approximately 7500 cm^--1^ to 600 cm^--1^, and stored in JCAMP-DX format with an extension of .jdx (JCAMP is the Joint Committee on Atomic and Molecular Physical Data). The data was extracted from the .jdx file using the `R` package `readJDX`, trimmed to 4096 points from approximately 4550 cm^--1^ to approximately 600 ^--1^, and stored in .csv format. The Fourier transformation of the data used `R`'s `fft()` function. (*Why 4096 points? The mathematics behind the Fourier transform requires that the number of data points be a power of 2; 4096 is equivalent to $2^{12}$*)
+The data for the urea's diffuse reflectance spectrum is from the [National Institute of Standards and Technology (NIST)](https://webbook.nist.gov/cgi/cbook.cgi?ID=C57136&Type=IR-SPEC&Index=1#IR-SPEC). The original data gives the intensity of reflected light for 7135 wavenumbers from approximately $7500$ cm^--1^ to $600$ cm^--1^, and stored in JCAMP-DX format with an extension of .jdx (JCAMP is the Joint Committee on Atomic and Molecular Physical Data). The data was extracted from the .jdx file using the `R` package `readJDX`, trimmed to $4096$ points from approximately $4550$ cm^--1^ to approximately $600$ ^--1^, and stored in .csv format. The Fourier transformation of the data used `R`'s `fft()` function. (*Why 4096 points? The mathematics behind the Fourier transform requires that the number of data points be a power of 2; 4096 is equivalent to $2^{12}$*)
 
 Gaussian peaks in the frequency domain were created in `R` using the `dnorm()` function 
 $$\text{intensity = area} \times \text{dnorm(x, position, width/2.35)}$$
@@ -58,6 +40,6 @@ The following three texts provide additional insight into the Fourier transform 
 * Richard G. Brereton [*Chemometrics: Data Analysis for the Laboratory and Chemical Plant*, Wiley, Chichester, UK 2003.](https://onlinelibrary.wiley.com/doi/book/10.1002/0470863242)
 * B.G.M. Vandegubste, D. L. Massart, L.M.C. Buydens, S. De Jong, P.J. Lewi, J. Smeyers-Verbeke Chapter 40 in [*Handbook of Chemometrics and Qualimetrics: Part B,, Elsevier, Amsterdam, 1998.](https://shop.elsevier.com/books/handbook-of-chemometrics-and-qualimetrics/massart/978-0-444-82853-8)
 
-For additional information about the superposition of waves, see AC3.0: Superposition of Waves from this series of modules on analytical chemistry.
+For additional information about the superposition of waves, see AC3.0: Superposition of Waves from this series of learning modules on analytical chemistry.
 
 Additional browser-based applications on the Fourier transform are available [here](http://195.134.76.37/applets/AppletFourier/Appl_Fourier2.html) and [here](http://195.134.76.37/applets/AppletFourAnal/Appl_FourAnal2.html).

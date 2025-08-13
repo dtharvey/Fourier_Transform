@@ -1,27 +1,4 @@
-# server for fourier transform
-
-library(shiny)
-library(shinythemes)
-
-# set colors
-palette("Okabe-Ito")
-
-# create data for introduction
-t = seq(0,2,0.001)
-f = 1
-yt = sign(sin(2*pi*f*t))
-yt[length(yt)] = 0
-k = seq(1,10,1)
-A = 4/pi * 1/(2*k-1)
-a = 2*k - 1
-y1 = A[1] * sin(2*pi*a[1]*f*t)
-y2 = A[2] * sin(2*pi*a[2]*f*t)
-y3 = A[3] * sin(2*pi*a[3]*f*t)
-y4 = A[4] * sin(2*pi*a[4]*f*t)
-y5 = A[5] * sin(2*pi*a[5]*f*t)
-
-# read in data for wrap up
-urea = read.csv(file = "data/urea.csv")
+# server for fourier transform learning module
 
 shinyServer(function(input,output,session){
   
@@ -30,12 +7,12 @@ shinyServer(function(input,output,session){
     plot(x = t, y = yt, type = "l", xlab = "time (s)", ylab = "amplitude",
          lwd = 4, col = 6, cex.axis = 1.5, cex.lab = 1.5, 
          ylim = c(-1.5,1.5), cex.main = 1.5,
-         main = "time domain")
+         main = "time domain of square wave")
     grid(lwd = 1, col = 1)
     plot(x = a, y = A, type = "h", xlab = "frequency", 
          ylab = "amplitude", lwd = 4, col = 6, cex.axis = 1.5, 
          cex.lab = 1.5, xlim = c(0,20), ylim = c(0,1.5), cex.main = 1.5,
-         main = "frequency domain")
+         main = "frequency domain of square wave")
     text(x = a, y = A, labels = round(A, digits = 3), pos = 3, cex = 1.5)
     grid(lwd = 1, col = 1)
     plot(x = t, y = y1 + y2 + y3 + y4 + y5, type = "l", xlab = "time (s)",

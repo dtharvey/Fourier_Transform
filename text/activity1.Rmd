@@ -2,26 +2,6 @@
 output: html_fragment
 ---
 
-<!-- The following script makes it possible to use the mhchem -->
-<!-- latex package in a .Rmd file and to knit it into an .html file -->
-<!-- the font size is scaled to 90% to match text -->
-
-<!-- ```{=html} -->
-<!-- <script type="text/x-mathjax-config"> -->
-<!-- MathJax.Hub.Config({ -->
-<!--   TeX: { -->
-<!--     extensions: ["[Contrib]/mhchem/mhchem.js"] -->
-<!-- } -->
-<!-- }); -->
-<!-- MathJax.Hub.Config({  -->
-<!--         "HTML-CSS": { scale: 90 },  -->
-<!--         SVG: { linebreaks: { automatic:true } },  -->
-<!--  }); -->
-<!-- </script> -->
-<!-- ``` -->
-
-<!-- text for activity 1 -->
-
 The ability to represent a signal in the time domain or in the frequency domain is general and applies to both periodic functions, such as the continuously repeating square wave from the introduction, or a non-periodic function, such as a peak in an NMR spectrum. The controls on the right allow you to explore the relationship between a peak in the frequency domain and its corresponding oscillating signal in the time domain. 
 
 **Exercise 1**. A peak in the frequency domain is defined by three variables: its position on the frequency axis, its width at half of its maximum height, and its area. The corresponding time domain signal is an oscillating wave defined by three properties: its period, its amplitude, and its decay rate. Annotate the figure on the right to show each of these six variables. 

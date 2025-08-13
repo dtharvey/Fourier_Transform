@@ -1,6 +1,4 @@
-# ui for fourier transform
-library(shiny)
-library(shinythemes)
+# ui for fourier transform learning module
 
 ui = navbarPage("AC 3.0: The Fourier Transform",
                 theme = shinytheme("journal"),
@@ -9,25 +7,33 @@ ui = navbarPage("AC 3.0: The Fourier Transform",
                             type = "text/css",
                             href = "style.css")
           ),
+          
+  # introduction
               tabPanel("Introduction",
                 fluidRow(
                   withMathJax(),
                   column(width = 6,
                     wellPanel(
-                      includeHTML("text/introduction.html")
-          )     
-          ),
+                      class = "scrollable-well",
+                      div(
+                        class = "html-fragment",
+                        includeHTML("text/introduction.html")
+          ))),
           
           column(width = 6,
-          plotOutput("introplot",height = "750px")
+          plotOutput("introplot",height = "550px")
           ))), # close introduction tabpanel
-          
+ 
+  # first activity         
                 tabPanel("FT of A Single Peak",
                     fluidRow(
                       column(width = 6,
                              wellPanel(
-                               includeHTML("text/onepeak.html")
-                             )),
+                               class = "scrollable-well",
+                               div(
+                                 class = "html-fragment",
+                                includeHTML("text/activity1.html")
+                             ))),
                     column(width = 6,
                          align = "center",
                     splitLayout(
@@ -47,17 +53,21 @@ ui = navbarPage("AC 3.0: The Fourier Transform",
                                   width = "150px", step = 0.1)
           ),
                     
-                    plotOutput("onepeak", height = "650px")
+                    plotOutput("onepeak", height = "550px")
           )
           )
           ),# close one peak tabpanel
           
+  # second activity  
           tabPanel("FT of Two Peaks",
                    fluidRow(
                      column(width = 6,
                             wellPanel(
-                              includeHTML("text/twopeaks.html")
-                            )),
+                              class = "scrollable-well",
+                              div(
+                                class = "html-fragment",
+                               includeHTML("text/activity2.html")
+                            ))),
                      column(width = 6,
                             align = "center",
                             splitLayout(
@@ -88,21 +98,24 @@ ui = navbarPage("AC 3.0: The Fourier Transform",
                                           min = 5, max = 10, value = 10,
                                           width = "150px", step = 0.1)
                             ),
-                            plotOutput("twopeaks", height = "575px")
+                            plotOutput("twopeaks", height = "400px")
                      )
                    )
           ),# close two peak tabpanel
           
+  # wrapping up
           tabPanel("Wrapping Up",
                    fluidRow(
                      column(width = 6,
-                            wellPanel(id = "wrapuppanel",
-                                      style = "overflow-y:scroll; max-height: 750px",
-                              includeHTML("text/wrapup.html")
-                            )),
+                            wellPanel(
+                              class = "scrollable-well",
+                              div(
+                                class = "html-fragment",
+                               includeHTML("text/wrapup.html")
+                            ))),
                      column(width = 6,
                             align = "center",
-                   plotOutput("wrapup", height = "700px")
+                   plotOutput("wrapup", height = "600px")
                      )
                    ))
           )# close ui

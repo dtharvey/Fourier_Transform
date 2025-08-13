@@ -1,57 +1,39 @@
 
 
 
-<!-- The following script makes it possible to use the mhchem -->
-<!-- latex package in a .Rmd file and to knit it into an .html file -->
-<!-- the font size is scaled to 90% to match text -->
-<!-- ```{=html} -->
-<!-- <script type="text/x-mathjax-config"> -->
-<!-- MathJax.Hub.Config({ -->
-<!--   TeX: { -->
-<!--     extensions: ["[Contrib]/mhchem/mhchem.js"] -->
-<!-- } -->
-<!-- }); -->
-<!-- MathJax.Hub.Config({  -->
-<!--         "HTML-CSS": { scale: 90 },  -->
-<!--         SVG: { linebreaks: { automatic:true } },  -->
-<!--  }); -->
-<!-- </script> -->
-<!-- ``` -->
 <!-- text for introduction -->
-<p>The Fourier transform (FT) is a mathematical operation that allows us
-to take a signal recorded in one measurement domain (perhaps time) and
-convert it into a complementary signal in another measurement domain
-(perhaps frequency).</p>
+<p><span class="math inline">\(\require{mhchem}\)</span>The Fourier
+transform (FT) is a mathematical operation that takes a signal in one
+measurement domain and converts it into a signal in another measurement
+domain.</p>
 <div id="time-domains-and-frequency-domains" class="section level4">
 <h4>Time Domains and Frequency Domains</h4>
-<p>The figure on the upper right is a square wave with amplitude shown
-on the <em>y</em>-axis and time shown on the <em>x</em>-axis. The square
-wave has a period of 1 sec, a frequency of 1 sec<sup>-1</sup>, and an
-amplitude that varies between <span class="math inline">\(\pm
-1\)</span>. The figure shows two full periods and continues in both
-directions along the <em>x</em>-axis. This is the time domain
-representation of a square wave.</p>
-<p>The middle figure shows the same square wave expressed as a series of
-sine waves, called a Fourier series. Each vertical line defines a sine
-wave by its amplitude, which are the heights of the vertical lines
-(shown above each line), and by its frequency, which are the positions
-of the vertical lines along the <em>x</em>-axis. The figure shows the
-first 10 sine waves of an infinite series defined as <span class="math display">\[y(t) = \frac{4}{\pi} \sum_{k = 1}^{5}
-\frac{1}{2k-1} sin \left( 2\pi(2k-1)t \right)\]</span> where <span class="math inline">\(k\)</span> is an index for the sine wave <span class="math inline">\((k = 1, 2, 3, \dots \infty)\)</span>. The first
-sine wave, for example, has an amplitude, <span class="math inline">\(A_1\)</span>, of 1.273 and a frequency, <span class="math inline">\(f_1\)</span>, of 1; each subsequent sine wave has
+<p>The figure on the upper right is a square wave with amplitude on the
+<em>y</em>-axis and time on the <em>x</em>-axis. The square wave has a
+period of 1 s, a frequency of 1 s<sup>-1</sup>, and an amplitude that
+varies between <span class="math inline">\(\pm 1\)</span>. The figure
+shows two full periods. This is the time domain.</p>
+<p>The middle figure describes the square wave as a series of sine
+waves, called a Fourier series. Each vertical line defines a sine wave
+by its amplitude—the height of the vertical line—and its frequency,
+which is the vertical line’s position on the <em>x</em>-axis. The figure
+shows the first 10 sine waves of an infinite series defined as</p>
+<p><span class="math display">\[y(t) = \frac{4}{\pi} \sum_{k = 1}^{5}
+\frac{1}{2k-1} sin \left( 2\pi(2k-1)t \right)\]</span></p>
+<p>where <span class="math inline">\(k\)</span> is an index for the sine
+wave <span class="math inline">\((k = 1, 2, 3, \dots \infty)\)</span>.
+The first sine wave has an amplitude, <span class="math inline">\(A_1\)</span>, of 1.273 and a frequency, <span class="math inline">\(f_1\)</span>, of 1; each subsequent sine wave has
 an amplitude equal to <span class="math inline">\(\frac{A_1}{2k-1}\)</span> and a frequency equal to
 <span class="math inline">\(f_1 \times (2k-1)\)</span>. This is the
-frequency domain representation of the square wave shown on the upper
-right.</p>
+frequency domain.</p>
 </div>
 <div id="moving-between-domains" class="section level4">
 <h4>Moving Between Domains</h4>
 <p>Although the figure on the top right clearly is a square wave, it
-isn’t obvious that the series of amplitudes and frequencies in the
-middle figure is equivalent to the square wave. The figure on the lower
-right shows the first five sine waves in this Fourier series as dashed
-lines. The sum of these five sine waves is the solid, sky-blue line.
-Although five sine waves is not sufficient to reproduce exactly the
-square wave shown by the black, dashed line, including more sine waves
-will provide a better approximation.</p>
+isn’t obvious that the Fourier series in the middle figure is equivalent
+to a square wave. The figure on the lower right shows the first five
+sine waves as dashed lines. The sum of these sine waves is the solid,
+sky-blue line. Although five sine waves is not sufficient to reproduce
+exactly a square wave—the black, dashed line—including more sine waves
+provides a better approximation.</p>
 </div>
