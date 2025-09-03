@@ -46,7 +46,7 @@ shinyServer(function(input,output,session){
     }
     
     yfft = fft(y)
-    old.par = par(mfrow = c(2,1))
+    old.par = par(mfrow = c(1,2))
     plot(x = x[1:256], y = y[1:256], type = "l", 
          lwd = 4, col = 6, ylim = c(0,2), xlim = c(0,150),
          xlab = "frequency", ylab = "signal",
@@ -95,7 +95,7 @@ shinyServer(function(input,output,session){
       yfft_total = Re(yfft2a) + Re(yfft2b)
     }
     
-    old.par = par(mfrow = c(2,1))
+    old.par = par(mfrow = c(1,2))
     plot(x = x[1:256], y = y_total[1:256], type = "l", 
          lwd = 4, col = 6,
          ylim = c(0,4), xlim = c(0,150), xlab = "frequency",

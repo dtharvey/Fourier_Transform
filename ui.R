@@ -38,7 +38,8 @@ ui = navbarPage("AC 3.0: The Fourier Transform",
                          align = "center",
                     splitLayout(
                       selectInput("peaktype", "peak type",
-                                   choices = c("Gaussian","Lorentzian",
+                                   choices = c("Gaussian",
+                                               "Lorentzian",
                                                "Voigt"),
                                    selected = "Gaussian",
                                    selectize = FALSE),
@@ -54,54 +55,49 @@ ui = navbarPage("AC 3.0: The Fourier Transform",
           ),
                     
                     plotOutput("onepeak", height = "550px")
-          )
-          )
-          ),# close one peak tabpanel
+          ))),# close one peak tabpanel
           
   # second activity  
-          tabPanel("FT of Two Peaks",
-                   fluidRow(
-                     column(width = 6,
-                            wellPanel(
-                              class = "scrollable-well",
-                              div(
-                                class = "html-fragment",
-                               includeHTML("text/activity2.html")
+    tabPanel("FT of Two Peaks",
+            fluidRow(
+              column(width = 6,
+                    wellPanel(
+                    class = "scrollable-well",
+                      div(
+                          class = "html-fragment",
+                          includeHTML("text/activity2.html")
                             ))),
-                     column(width = 6,
-                            align = "center",
-                            splitLayout(
-                              radioButtons("include", "include peaks",
-                                           choices = c("1 only", 
-                                                       "2 only",
+                column(width = 6,
+                    align = "center",
+                    splitLayout(
+                      radioButtons("include", "include peaks",
+                                    choices = c("1 only", "2 only",
                                                        "1 and 2"),
-                                           selected = "1 and 2"),
-                              sliderInput("p2a","peak 1: position",
-                                          min = 25, max = 75, value = 40,
-                                          width = "150px", step = 1),
-                              sliderInput("w2a","Peak 1: width",
-                                          min = 5, max = 10, value = 5,
-                                          width = "150px", step = 0.1),
-                              sliderInput("a2a","Peak 1: area",
-                                          min = 5, max = 10, value = 10,
-                                          width = "150px", step = 0.1)
+                                    selected = "1 and 2"),
+                      sliderInput("p2a","peak 1: position",
+                                  min = 25, max = 75, value = 40,
+                                  width = "150px", step = 1),
+                      sliderInput("w2a","Peak 1: width",
+                                  min = 5, max = 10, value = 5,
+                                  width = "150px", step = 0.1),
+                      sliderInput("a2a","Peak 1: area",
+                                  min = 5, max = 10, value = 10,
+                                  width = "150px", step = 0.1)
+                          ),
+                      splitLayout(
+                        p(""),
+                        sliderInput("p2b","peak 2: position",
+                                    min = 25, max = 75, value = 60,
+                                    width = "150px", step = 1),
+                        sliderInput("w2b","Peak 2: width",
+                                    min = 5, max = 10, value = 5,
+                                    width = "150px", step = 0.1),
+                        sliderInput("a2b","Peak 2: area",
+                                    min = 5, max = 10, value = 10,
+                                    width = "150px", step = 0.1)
                             ),
-                            splitLayout(
-                              p(""),
-                              sliderInput("p2b","peak 2: position",
-                                          min = 25, max = 75, value = 60,
-                                          width = "150px", step = 1),
-                              sliderInput("w2b","Peak 2: width",
-                                          min = 5, max = 10, value = 5,
-                                          width = "150px", step = 0.1),
-                              sliderInput("a2b","Peak 2: area",
-                                          min = 5, max = 10, value = 10,
-                                          width = "150px", step = 0.1)
-                            ),
-                            plotOutput("twopeaks", height = "400px")
-                     )
-                   )
-          ),# close two peak tabpanel
+                        plotOutput("twopeaks", height = "400px")
+                     ))),# close two peak tabpanel
           
   # wrapping up
           tabPanel("Wrapping Up",
@@ -116,6 +112,5 @@ ui = navbarPage("AC 3.0: The Fourier Transform",
                      column(width = 6,
                             align = "center",
                    plotOutput("wrapup", height = "600px")
-                     )
-                   ))
+               )))
           )# close ui

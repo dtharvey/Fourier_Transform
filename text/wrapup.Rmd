@@ -6,11 +6,11 @@ output: html_fragment
 
 #### FT of Diffuse Reflectance Spectrum
 
-Our treatment of Fourier transforms in this module is limited to a system with just one or two ideal peaks as this allowed us to explore the relationship between a peak's position in the frequency domain and its oscillation period in the time domain, a peak's width in the frequency domain and its decay rate in the time domain, and a peak's area in the frequency domain and its intensity in the time domain. A more complex spectrum---one with multiple peaks in the frequency domain---results in a more complex pattern of oscillating waves in the time domain. The figure on the upper right, for example, shows a portion of the diffuse reflectance infrared spectrum for urea and, on the lower right, a portion of its time domain spectrum following a Fourier transform.
+Our treatment of Fourier transforms in this module is limited to a system with just one or two ideal peaks as this allowed us to explore the relationship between a peak's position in the frequency domain and its oscillation period in the time domain, a peak's width in the frequency domain and its decay rate in the time domain, and a peak's area in the frequency domain and its intensity in the time domain. A more complex spectrum---one with multiple peaks in the frequency domain---results in a more complex pattern of oscillating waves in the time domain. The figure on the upper right, for example, shows a portion of the diffuse reflectance infrared (DRIFT) spectrum for urea and, on the lower right, a portion of its time domain spectrum following a Fourier transform.
 
 #### Time Domains and Frequency Domains
 
-In the figure on the right---and in the examples considered in this module---the frequency domain is a set of non-periodic peaks and the time domain is an oscillating signal whose amplitude decays over time. For the diffuse reflectance spectra seen on the right, collected using a Fourier Transform Infrared Spectrometer (FT--IR), the measured signal is the time domain spectrum on the lower right, which is then converted into the frequency domain spectrum by applying the Fourier transform. For other analytical methods, the peaks appear in the time domain and the corresponding frequency domain is obtained by applying the Fourier transform. 
+In the figure on the right---and in the examples considered in this module---the frequency domain is a set of non-periodic peaks and the time domain is an oscillating signal whose amplitude decays over time. For the DRIFT spectrum on the right, collected using a Fourier Transform Infrared Spectrometer (FT--IR), the measured signal is the time domain spectrum on the lower right, which is then converted into the frequency domain spectrum by applying the Fourier transform. For other analytical methods, the peaks appear in the time domain and the corresponding frequency domain is obtained by applying the Fourier transform. 
 
 #### Data Set Used in this Module
 
@@ -28,17 +28,19 @@ The Voigt peaks for a given area, position, and width are approximated as a 50:5
 
 #### Additional Resources
 
-The following series of papers provide a good introduction to the Fourier transform:
+The following papers provide a good introduction to the Fourier transform and its application in spectroscopy. The last of these papers describes a Python-based interactive learning module. 
 
-* Glasser, L. [“Fourier Transforms for Chemists: Part I. Introduction to the Fourier Transform](https://doi.org/10.1021/ed064pA228),” J. Chem. Educ. 1987, 64, A228–A233
-* Glasser, L. [“Fourier Transforms for Chemists: Part II. Fourier Transforms in Chemistry and Spectroscopy](https://doi.org/10.1021/ed064pA260),” J. Chem. Educ. 1987, 64, A260–A266
-* Glasser, L. [“Fourier Transforms for Chemists: Part III. Fourier Transforms in Data Treatment](https://doi.org/10.1021/ed064pA306),” J. Chem. Educ. 1987, 64, A306–A313.
+* Leslie Glasser [“Fourier Transforms for Chemists: Part I. Introduction to the Fourier Transform](https://doi.org/10.1021/ed064pA228),” J. Chem. Educ. 1987, 64, A228–A233.
+* Leslie, Glasser [“Fourier Transforms for Chemists: Part II. Fourier Transforms in Chemistry and Spectroscopy](https://doi.org/10.1021/ed064pA260),” J. Chem. Educ. 1987, 64, A260–A266.
+* Leslie Glasser. [“Fourier Transforms for Chemists: Part III. Fourier Transforms in Data Treatment](https://doi.org/10.1021/ed064pA306),” J. Chem. Educ. 1987, 64, A306–A313.
+* A.J. Cominic III, Nicholas L. Cipolla, William C. Pfalzgraff, Jeffrey A. Jankowski, Rebecca J. Raph, and Andrés Montoya-Castillo ["A Pedagogical Tour of the Fourier Transform with Applications to NMR and IR Spectroscopy](https://doi.org/10.1021/acs.jchemed.4c01439), "J. Chem. Educ. 2025, 102, 1972-1980.
+
 
 The following three texts provide additional insight into the Fourier transform and some of the mathematical details; the first of the three texts is the most basic and the last of the three texts is more advanced:
 
 * Kenneth R. Beebe, Randy J. Pell, Mary Beth Seaholtz [*Chemometrics: A Practical Guide*, Wiley-Interscience, NY, 1998](https://www.wiley.com/en-us/Chemometrics%3A+A+Practical+Guide-p-9780471124511).
 * Richard G. Brereton [*Chemometrics: Data Analysis for the Laboratory and Chemical Plant*, Wiley, Chichester, UK 2003.](https://onlinelibrary.wiley.com/doi/book/10.1002/0470863242)
-* B.G.M. Vandegubste, D. L. Massart, L.M.C. Buydens, S. De Jong, P.J. Lewi, J. Smeyers-Verbeke Chapter 40 in [*Handbook of Chemometrics and Qualimetrics: Part B,, Elsevier, Amsterdam, 1998.](https://shop.elsevier.com/books/handbook-of-chemometrics-and-qualimetrics/massart/978-0-444-82853-8)
+* B.G.M. Vandegubste, D. L. Massart, L.M.C. Buydens, S. De Jong, P.J. Lewi, J. Smeyers-Verbeke Chapter 40 in [*Handbook of Chemometrics and Qualimetrics: Part B*, Elsevier, Amsterdam, 1998.](https://shop.elsevier.com/books/handbook-of-chemometrics-and-qualimetrics/massart/978-0-444-82853-8)
 
 For additional information about the superposition of waves, see AC3.0: Superposition of Waves from this series of learning modules on analytical chemistry.
 
